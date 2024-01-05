@@ -5,8 +5,8 @@ const modalContext = createContext({
      progress:'' ,
      showCart:()=>{},
      hideCart:()=>{},
-     showCheckBox:()=>{},
-     hideCheckBox:()=>{} 
+     showCheckout:()=>{},
+     hideCheckout:()=>{} 
 })
 
 export function ModalContextProvider({children}){
@@ -20,10 +20,10 @@ export function ModalContextProvider({children}){
         setModal('');
     }
 
-    function showCheckBox(){
-        setModal('checkbox');
+    function showCheckout(){
+        setModal('checkout');
     }
-    function hideCheckBox(){
+    function hideCheckout(){
         setModal('');
     }
 
@@ -31,8 +31,8 @@ export function ModalContextProvider({children}){
         progress:modal ,
         showCart,
         hideCart,
-        showCheckBox,
-        hideCheckBox 
+        showCheckout,
+        hideCheckout 
     }
 
     return (

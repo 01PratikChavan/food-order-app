@@ -1,6 +1,5 @@
-export function formattedPrice(number){
-    return number.toLocalString('en-US' , {
-        style:'currency' ,
-        currency:'USD'
-    })
-}
+export const currencyFormatter  = new Intl.NumberFormat('en-US' ,{
+     style:'currency',
+     currency:'INR' ,
+})
+
